@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CarRenting"
+             x:Class="CarRenting.MainPage">
+
+    <StackLayout Orientation="Vertical" Padding="20">
+        <Label Text="Automóviles" 
+           HorizontalOptions="Center" FontSize="Medium"/>
+        <Picker x:Name="carModelPicker" Title="Selecciona un modelo" SelectedIndexChanged="CarModelPicker_SelectedIndexChanged">
+        </Picker>
+        <Label FontAttributes="Bold" Text="Modelo: "/>
+        <Label BindingContext="{x:Reference Name=carModelPicker}"
+               Text="{Binding Path=SelectedItem.Model}" />
+        <Label FontAttributes="Bold" Text="Descripción: "/>
+        <Label BindingContext="{x:Reference Name=carModelPicker}"
+               Text="{Binding Path=SelectedItem.Description}" />
+        <Label FontAttributes="Bold" Text="Número de plazas: "/>
+        <Label BindingContext="{x:Reference Name=carModelPicker}"
+               Text="{Binding Path=SelectedItem.PlacesNumber}" />
+        <Label FontAttributes="Bold" Text="Es gasolina: "/>
+        <Switch x:Name="isFuelSwitch" IsEnabled="False"
+                HorizontalOptions="Start"/>
+        <Label FontAttributes="Bold" Text="Precio/dia: "/>
+        <Label BindingContext="{x:Reference Name=carModelPicker}"
+               Text="{Binding Path=SelectedItem.RentingPrice}" />
+        <ScrollView Orientation="Horizontal">
+            <StackLayout x:Name="photoGalleryContainer" Orientation="Horizontal">
+            </StackLayout>
+        </ScrollView>
+        <Button x:Name="rentButton"
+                IsEnabled="False" Text="Alquilar" 
+                VerticalOptions="EndAndExpand" Clicked="RentButton_Clicked"/>
+    </StackLayout>
+
+</ContentPage>

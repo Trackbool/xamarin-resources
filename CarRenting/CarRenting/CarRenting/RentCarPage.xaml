@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarRenting.RentCarPage"
+             BindingContext="{Binding Instance}">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label FontAttributes="Bold" FontSize="Medium" Text="{Binding Car.Model}"
+                HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Descripción: "/>
+                <Label Text="{Binding Car.Description}"/>
+            </StackLayout>
+            <Label Text="Fecha de recogida:" />
+            <DatePicker x:Name="pickUpDatePicker" Format="dd/MM/yyyy" PropertyChanged="PickUpDatePicker_PropertyChanged"/>
+            <Label Text="Fecha de devolución:" />
+            <DatePicker x:Name="returnDatePicker" Format="dd/MM/yyyy" PropertyChanged="UpdateTotalAmount"/>
+            <Label Text="Fecha de nacimiento:" />
+            <DatePicker x:Name="birthDatePicker" Format="dd/MM/yyyy" PropertyChanged="UpdateTotalAmount"/>
+            <StackLayout Orientation="Horizontal">
+                <Label FontSize="Medium" VerticalOptions="EndAndExpand" Text="Total:" />
+                <Label x:Name="totalAmountLabel" VerticalOptions="EndAndExpand" FontAttributes="Bold" FontSize="Large" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
