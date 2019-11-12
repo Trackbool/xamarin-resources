@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="CulturalEvents.views.NewEventPage">
+    <ContentPage.Content>
+        <StackLayout Padding="12">
+            <Label Text="Añadir" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
+            <Label Text="Nombre evento:" />
+            <Entry HorizontalOptions="FillAndExpand"
+                   Text="{Binding NewEvent.Name, Mode=OneWayToSource}" />
+            <Label Text="Descripción:" />
+            <Editor HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                    Text="{Binding NewEvent.Description, Mode=OneWayToSource}"/>
+            <Label Text="Tipo:" />
+            <Picker Title="Tipo de evento"
+                    SelectedItem="{Binding SelectedEventType, Mode=OneWayToSource}" 
+                    ItemsSource="{Binding EventTypeValues}" />
+            <Label Text="Fecha:" />
+            <DatePicker MinimumDate="{x:Static sys:DateTime.Now}"
+                        Date="{Binding NewEvent.Date, Mode=OneWayToSource}"/>
+            <Button Text="Añadir" Command="{Binding AddEvent}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
