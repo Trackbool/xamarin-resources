@@ -33,17 +33,6 @@ namespace CulturalEvents
             }
         }
 
-        public ICommand OpenNewEventWindowCommand
-        {
-            get
-            {
-                return new Command(async () =>
-                {
-                    await Application.Current.MainPage.Navigation.PushAsync(new NewEventPage(events));
-                });
-            }
-        }
-
         private void LoadEvents()
         {
             Events.Clear();

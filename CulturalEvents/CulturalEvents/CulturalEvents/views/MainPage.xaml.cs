@@ -25,5 +25,10 @@ namespace CulturalEvents
             Event selectedEvent = eventsListView.SelectedItem as Event;
             Navigation.PushAsync(new EventDetailPage(selectedEvent));
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new NewEventPage(viewModel.Events));
+        }
     }
 }
