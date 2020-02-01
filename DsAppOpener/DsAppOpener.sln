@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DsAppOpener.Android", "DsAppOpener\DsAppOpener.Android\DsAppOpener.Android.csproj", "{9E973310-2971-4F13-AA23-284D5382F34C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DsAppOpener", "DsAppOpener\DsAppOpener\DsAppOpener.csproj", "{10E90C8E-BEAD-44B6-9F74-13A5ED34287F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E973310-2971-4F13-AA23-284D5382F34C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E973310-2971-4F13-AA23-284D5382F34C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E973310-2971-4F13-AA23-284D5382F34C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9E973310-2971-4F13-AA23-284D5382F34C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E973310-2971-4F13-AA23-284D5382F34C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E973310-2971-4F13-AA23-284D5382F34C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{10E90C8E-BEAD-44B6-9F74-13A5ED34287F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10E90C8E-BEAD-44B6-9F74-13A5ED34287F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10E90C8E-BEAD-44B6-9F74-13A5ED34287F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{10E90C8E-BEAD-44B6-9F74-13A5ED34287F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10E90C8E-BEAD-44B6-9F74-13A5ED34287F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10E90C8E-BEAD-44B6-9F74-13A5ED34287F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0976514-8F85-4497-B88C-1A8C095B73CA}
+	EndGlobalSection
+EndGlobal
